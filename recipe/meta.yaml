@@ -10,7 +10,8 @@ source:
   sha256: 10a8292d6eb3aae1c501ea19a2a1c77b6b6dc90e8ca1e8bac5eaed7656f6ec49
 
 build:
-  number: 0
+  number: 1
+  skip: True  # [py>37]
   script: {{ PYTHON }} -m pip install . -vv
   entry_points:
     - graphbrain = graphbrain.__main__:cli
@@ -40,7 +41,7 @@ test:
 
 about:
   home: https://pypi.org/project/graphbrain/
-  summary: Knowledge System + Natural Language Understanding
+  summary: Knowledge System + Natural Language Understanding.
   license: MIT
   license_file: LICENSE
 
