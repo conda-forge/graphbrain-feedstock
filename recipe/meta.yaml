@@ -1,5 +1,5 @@
 {% set name = "graphbrain" %}
-{% set version = "0.3.2" %}
+{% set version = "0.4.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 10a8292d6eb3aae1c501ea19a2a1c77b6b6dc90e8ca1e8bac5eaed7656f6ec49
+  sha256: 247add2e93e177da176d1d1653974635da7368690aa85320e5c0881161545ee9
 
 build:
-  number: 1
-  skip: True  # [py>37]
+  number: 0
+  skip: true  # [py>37]
   script: {{ PYTHON }} -m pip install . -vv
   entry_points:
     - graphbrain = graphbrain.__main__:cli
