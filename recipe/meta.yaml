@@ -11,7 +11,7 @@ source:
 
 build:
   number: 0
-  skip: True  # [py>37][py<39]
+  skip: True  # [py>37]
   script: {{ PYTHON }} -m pip install . -vv
   entry_points:
     - graphbrain = graphbrain.__main__:cli
@@ -21,14 +21,14 @@ requirements:
     - {{ compiler('c') }}
   host:
     - pip
-    - python
+    - python <3.9
   run:
     - asciitree
     - ipython
     - numpy
     - plyvel
     - progressbar2
-    - python
+    - python <3.9
     - python-igraph
     - spacy
     - termcolor
