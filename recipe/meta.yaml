@@ -37,7 +37,6 @@ requirements:
 test:
   imports:
     - graphbrain
-    - graphbrain.agents
 
 about:
   home: https://pypi.org/project/graphbrain/
