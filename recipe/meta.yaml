@@ -21,14 +21,14 @@ requirements:
     - {{ compiler('c') }}
   host:
     - pip
-    - python <3.9
+    - python >=3.6,<3.9
   run:
     - asciitree
     - ipython
     - numpy
     - plyvel
     - progressbar2
-    - python <3.9
+    - python >=3.6,<3.9
     - python-igraph
     - spacy
     - termcolor
