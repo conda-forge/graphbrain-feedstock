@@ -40,7 +40,7 @@ test:
 
 about:
   home: https://pypi.org/project/graphbrain/
-  summary: Knowledge System + Natural Language Understanding.
+  summary: Knowledge System and Natural Language Understanding.
   license: MIT
   license_file: LICENSE
 
