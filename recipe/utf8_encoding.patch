@@ -1,7 +1,16 @@
 diff --git a/setup.py b/setup.py
-index 45491bc3..4e5daf27 100755
+index 45491bc3..1611e3a7 100755
 --- a/setup.py
 +++ b/setup.py
+@@ -56,7 +56,7 @@ def is_new_osx():
+ 
+ 
+ # -fopenmp ?
+-COMPILE_OPTIONS = ['-O2', '-Wno-strict-prototypes', '-Wno-unused-function']
++COMPILE_OPTIONS = ['-O2', '-Wno-unused-function']
+ # -fopenmp ?
+ LINK_OPTIONS = []
+ 
 @@ -134,7 +134,7 @@ for ext_module in ext_modules:
      ext_module.extra_link_args = LINK_OPTIONS
  
