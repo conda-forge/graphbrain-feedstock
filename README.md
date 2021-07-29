@@ -7,7 +7,7 @@ Package license: MIT
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/graphbrain-feedstock/blob/master/LICENSE.txt)
 
-Summary: Knowledge System + Natural Language Understanding.
+Summary: Knowledge System and Natural Language Understanding.
 
 Current build status
 ====================
