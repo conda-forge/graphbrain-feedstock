@@ -1,5 +1,5 @@
 {% set name = "graphbrain" %}
-{% set version = "0.4.3" %}
+{% set version = "0.5.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,13 +7,13 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: af84cd3f232c8a906d68203317c1d57434a963642f4bd037ca0f8cf2cfc49955
+  sha256: cf34eaf54225bebffa4f5981e8a4fa8135a53efb1f0e3089eef0432aaf437333
   patches:
     - utf8_encoding.patch
 
 build:
   number: 0
-  skip: True  # [py>37]
+  skip: true  # [py>37]
   script: {{ PYTHON }} -m pip install . -vv
   entry_points:
     - graphbrain = graphbrain.__main__:cli
@@ -51,4 +51,4 @@ extra:
     - rluria14
     - oblute
     - ndmaxar
-    - mxr-conda 
+    - mxr-conda
