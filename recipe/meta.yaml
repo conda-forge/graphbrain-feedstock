@@ -1,5 +1,5 @@
 {% set name = "graphbrain" %}
-{% set version = "0.3.2" %}
+{% set version = "0.4.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 10a8292d6eb3aae1c501ea19a2a1c77b6b6dc90e8ca1e8bac5eaed7656f6ec49
+  sha256: af84cd3f232c8a906d68203317c1d57434a963642f4bd037ca0f8cf2cfc49955
+  patches:
+    - utf8_encoding.patch
 
 build:
-  number: 1
+  number: 0
   skip: True  # [py>37]
   script: {{ PYTHON }} -m pip install . -vv
   entry_points:
@@ -37,11 +39,10 @@ requirements:
 test:
   imports:
     - graphbrain
-    - graphbrain.agents
 
 about:
   home: https://pypi.org/project/graphbrain/
-  summary: Knowledge System + Natural Language Understanding.
+  summary: Knowledge System and Natural Language Understanding.
   license: MIT
   license_file: LICENSE
 
@@ -50,3 +51,4 @@ extra:
     - rluria14
     - oblute
     - ndmaxar
+    - mxr-conda 
