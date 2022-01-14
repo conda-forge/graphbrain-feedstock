@@ -12,7 +12,7 @@ source:
     - utf8_encoding.patch
 
 build:
-  number: 0
+  number: 1
   skip: true  # [py>37]
   script: {{ PYTHON }} -m pip install . -vv
   entry_points:
