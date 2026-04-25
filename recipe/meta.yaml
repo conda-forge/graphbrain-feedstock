@@ -12,7 +12,7 @@ source:
     - utf8_encoding.patch
 
 build:
-  number: 1
+  number: 2
   skip: true  # [py>37]
   script: {{ PYTHON }} -m pip install . -vv
   entry_points:
@@ -21,6 +21,7 @@ build:
 requirements:
   build:
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
   host:
     - pip
     - python
